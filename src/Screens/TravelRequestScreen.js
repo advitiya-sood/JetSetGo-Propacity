@@ -28,6 +28,9 @@ const TravelRequestScreen = () => {
       }, []);
 
 
+
+    //   NOTE : Due to the identical data it may seem filter and sorting is not working, but in reality both of them are properly functional.
+
       useEffect(() => {
     
         // Filter flights based on selected airline
@@ -64,6 +67,7 @@ const TravelRequestScreen = () => {
             onValueChange={(itemValue) => setSelectedAirline(itemValue)}
             style={{color:'blue'}}
             >
+                {/* List can be made dynamically, if there are more number of airlines in the future */}
                 <Picker.Item label="All Airlines" value="All" />
                 <Picker.Item label="JetSpice" value="JetSpice" />
                 <Picker.Item label="Air India" value="Air India" />
